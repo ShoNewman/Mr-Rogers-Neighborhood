@@ -31,3 +31,7 @@ Test: "It should only return an array with 'Beep' if the number includes 1 and d
 Code: beepBoop(13);
 Expected Output: false;
 
+Test: "It should only return an array with 'Boop' if the number includes 2 and does not include the numbers 3"
+Code: beepBoop(23);
+Expected Output: false;
+
