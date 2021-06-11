@@ -1,24 +1,15 @@
-// let beepBoopArray = [];
+// Utility functions
+function isInteger(input) {
+  input = Number(input);
+  if (Number.isInteger(input)) {
+  return true;
+  } else {
+    return false;
+  }
+}
+isInteger("not an integer");
 
-// function beepBoop() {
-//   for (let i = 0; i < beepBoopArray.length; i++) {
-//     if (i === 0) {
-//       return i;
-//     } else if (i.includes(1) && !i.includes(2) && !i.includes(3)) {
-//       return beepBoopArray.push("Beep!");
-//     } else if (i.includes(2) && !i.includes(3)) {
-//       return beepBoopArray.push("Boop!");
-//     } else if (i.includes(3)) {
-//       return beepBoopArray.push("Won't you be my neighbor?");
-//     }
-
-//     if (i != Number.isInteger(userInput)) {
-//       return false;
-//     }
-//   }
-// }
-// beepBoop("23")
-// console.log(beepBoopArray);
+//Buisness Logic
 
 function beepBoop(input) {
   let beepBoopArray = input.split(" ");

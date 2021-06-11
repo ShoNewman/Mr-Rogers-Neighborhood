@@ -15,10 +15,6 @@ Test: "It should return an array with a 'Won't you be my neighbor?' if the numbe
 Code: beepBoop(2);
 Expected Output: ["Won't you be my neighbor?"];
 
-Test: "It should allow only integers to be inputted"
-Code: beepBoop("not an integer");
-Expected Output: [];
-
 Test: "It should return an array with 'Beep' if the number includes 1"
 Code: beepBoop(10);
 Expected Output: ["Beep"];
@@ -58,3 +54,9 @@ Expected Output: ["0", "Beep", "Boop!", "23"]
 Test: "It should check multple user Inputs for the number 3 and return a mutated array with 'Won't you be my neighbor'"
 code: beepBoop("0 10 12 23");
 Expected Output: ["0", "Beep", "Boop!", "Won't you be my neighbor"]
+
+-------------------------------------------------------
+Describe: isInteger(userInput)
+Test: "It should allow only integers to be inputted"
+Code: beepBoop("not an integer");
+Expected Output: false;
