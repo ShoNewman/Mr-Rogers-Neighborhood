@@ -41,5 +41,9 @@ Expected Output: ["Won't you be my neighbor?"];
 
 Test: "It should check multple user Inputs for the number 1 and return a mutated array with all numbers that include 1 replaced with 'Beep!'"
 code: beepBoop("0 10 12 11");
-Expected Output: ["0", "Beep!", "Beep!"]
+Expected Output: ["0", "Beep!", "Beep!", "Beep!"]
+
+Test: "It should check multple user Inputs for the number 1 and return a mutated array with all numbers that include 1 replaced with 'Beep!' but not numbers that include 2 or 3"
+code: beepBoop("0 10 12 13");
+Expected Output: ["0", "Beep", "12", "13"]
 
