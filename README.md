@@ -26,3 +26,8 @@ Expected Output: ("Beep")
 Test: "It should only return an array with 'Beep' if the number includes 1 and does not include the numbers 2"
 Code: beepBoop(12);
 Expected Output: false;
+
+Test: "It should only return an array with 'Beep' if the number includes 1 and does not include the numbers 3"
+Code: beepBoop(13);
+Expected Output: false;
+
