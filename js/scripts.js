@@ -29,3 +29,15 @@ function beepBoop(input) {
 beepBoop("0 10 12 23");
 
 //User Interface Logic
+let userInputArray = [];
+$(document).ready(function() {
+  $("form#userInputForm").submit(function(event) {
+    event.preventDefault();
+    
+    const number1 = parseInt($("#input").val());
+    userInputArray.push(number1); 
+
+  
+    alert(userInputArray);
+  });
+});

@@ -4,6 +4,7 @@
 div#header {
   width: 100%;
   margin: auto;
+  min-width: 650px;
   margin-top: 10%;
   margin-bottom: 10%;
 }
@@ -12,11 +13,11 @@ div#header {
 
 }
 form {
-  width:max-content; 
+  width: 70%;
+  max-width: 500px;
+  min-width: 450px;
   margin: auto;
 }
-.col-6 {
-}
-.col-6 input {
-  width: 100%;
+#output {
+  display: none;
 }
