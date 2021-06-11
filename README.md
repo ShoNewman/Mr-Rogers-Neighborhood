@@ -14,3 +14,7 @@ Expected Output: ["Boop"];
 Test: "It should return an array with a "Won't you be my neighbor?" if the number 3 is inputted"
 Code: beepBoop(2);
 Expected Output: ["Won't you be my neighbor?"];
+
+Test: "It should allow only integers to be inputted"
+Code: beepBoop("not an integer");
+Expected Output: [];

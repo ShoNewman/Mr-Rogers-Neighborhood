@@ -9,6 +9,10 @@ function beepBoop(userInput) {
   } else if (userInput === 3) {
     return beepBoopArray.push("Won't you be my neighbor?");
   }
+
+  if (userInput != Number.isInteger(userInput)) {
+    return false;
+  }
 }
-beepBoop(3)
+beepBoop("3.5")
 console.log(beepBoopArray);
