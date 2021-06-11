@@ -24,9 +24,9 @@ function beepBoop(input) {
   let beepBoopArray = input.split(" ");
   console.log(beepBoopArray);
   for (i = 0; i < beepBoopArray.length; i++) { 
-    if (beepBoopArray[i].includes("1") && !beepBoopArray[i].includes("2")&& !beepBoopArray[i].includes("3")) {
+    if (beepBoopArray[i].includes("1") && !beepBoopArray[i].includes("2") && !beepBoopArray[i].includes("3")) {
     beepBoopArray[i] = "Beep!";
-    } else if (beepBoopArray[i].includes("2")) {
+    } else if (beepBoopArray[i].includes("2") && !beepBoopArray[i].includes("3")) {
     beepBoopArray[i] = "Boop!"
     }
   }

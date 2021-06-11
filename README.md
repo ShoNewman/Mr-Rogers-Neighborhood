@@ -50,3 +50,7 @@ Expected Output: ["0", "Beep", "12", "13"]
 Test: "It should check multple user Inputs for the number 2 and return a mutated array with all numbers that include 2 replaced with 'Boop!'"
 code: beepBoop("0 10 12 13");
 Expected Output: ["0", "Beep", "Boop!", "13"]
+
+Test: "It should check multple user Inputs for the number 2 and return a mutated array with all numbers that include 2 replaced with 'Boop!' but not numbers that include 3"
+code: beepBoop("0 10 12 23");
+Expected Output: ["0", "Beep", "Boop!", "23"]
