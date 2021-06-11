@@ -21,7 +21,7 @@ Expected Output: [];
 
 Test: "It should return an array with 'Beep' if the number includes 1"
 Code: beepBoop(10);
-Expected Output: ("Beep")
+Expected Output: ["Beep"];
 
 Test: "It should only return an array with 'Beep' if the number includes 1 and does not include the numbers 2"
 Code: beepBoop(12);
@@ -31,7 +31,11 @@ Test: "It should only return an array with 'Beep' if the number includes 1 and d
 Code: beepBoop(13);
 Expected Output: false;
 
-Test: "It should only return an array with 'Boop' if the number includes 2 and does not include the numbers 3"
+Test: "It should only return an array with 'Boop' if the number includes 2 and does not include the number 3"
 Code: beepBoop(23);
 Expected Output: false;
+
+Test: "It should return an array with 'Won't you be my neighbor' if the number includes 3"
+Code: beepBoop(23);
+Expected Output: ["Won't you be my neighbor?"];
 

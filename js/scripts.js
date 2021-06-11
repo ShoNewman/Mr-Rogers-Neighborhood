@@ -6,7 +6,7 @@ function beepBoop(userInput) {
     return beepBoopArray.push("Beep!");
   } else if (userInput.includes(2) && !userInput.includes(3)) {
     return beepBoopArray.push("Boop!");
-  } else if (userInput === 3) {
+  } else if (userInput.includes(3)) {
     return beepBoopArray.push("Won't you be my neighbor?");
   }
 
