@@ -39,3 +39,7 @@ Test: "It should return an array with 'Won't you be my neighbor' if the number i
 Code: beepBoop(23);
 Expected Output: ["Won't you be my neighbor?"];
 
+Test: "It should check multple user Inputs for the number 1 and return a mutated array with all numbers that include 1 replaced with 'Beep!'"
+code: beepBoop("0 10 12 11");
+Expected Output: ["0", "Beep!", "Beep!"]
+
