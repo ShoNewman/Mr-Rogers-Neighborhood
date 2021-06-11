@@ -2,7 +2,7 @@ let beepBoopArray = [];
 function beepBoop(userInput) {
   if (userInput === 0) {
     return beepBoopArray.push(userInput)
-  } else if (userInput.includes(1)) {
+  } else if (userInput.includes(1) && !userInput.includes(2)) {
     return beepBoopArray.push("Beep!");
   } else if (userInput === 2) {
     return beepBoopArray.push("Boop!");
@@ -14,5 +14,5 @@ function beepBoop(userInput) {
     return false;
   }
 }
-beepBoop("10")
+beepBoop("12")
 console.log(beepBoopArray);

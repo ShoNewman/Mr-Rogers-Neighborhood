@@ -22,3 +22,7 @@ Expected Output: [];
 Test: "It should return an array with 'Beep' if the number includes 1"
 Code: beepBoop(10);
 Expected Output: ("Beep")
+
+Test: "It should only return an array with 'Beep' if the number includes 1 and does not include the numbers 2"
+Code: beepBoop(12);
+Expected Output: false;
