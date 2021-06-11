@@ -27,10 +27,12 @@ function beepBoop(input) {
     if (beepBoopArray[i].includes("1") && !beepBoopArray[i].includes("2") && !beepBoopArray[i].includes("3")) {
     beepBoopArray[i] = "Beep!";
     } else if (beepBoopArray[i].includes("2") && !beepBoopArray[i].includes("3")) {
-    beepBoopArray[i] = "Boop!"
+    beepBoopArray[i] = "Boop!";
+    } else if (beepBoopArray[i].includes("3")) {
+      beepBoopArray[i] = "Won't you be my neighbor?"
     }
   }
  return beepBoopArray;
 }
 
-beepBoop("0 10 12 13");
+beepBoop("0 10 12 23");
