@@ -27,3 +27,5 @@ function beepBoop(input) {
 }
 
 beepBoop("0 10 12 23");
+
+//User Interface Logic

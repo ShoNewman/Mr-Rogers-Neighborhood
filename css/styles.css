@@ -1,0 +1,22 @@
+.container {
+  overflow: auto;
+}
+div#header {
+  width: 100%;
+  margin: auto;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+#header h1 {
+  overflow: auto;
+
+}
+form {
+  width:max-content; 
+  margin: auto;
+}
+.col-6 {
+}
+.col-6 input {
+  width: 100%;
+}
