@@ -62,7 +62,7 @@ $(document).ready(function() {
     $('#output').text(userInputString);
 
   });
-  $('#beepBoop').click(function() {
+  $('#beepBoop').one('click', (function() {
     for (i=0; i < userInputArray.length; i++) {
       if (userInputArray[i] == "Beep!") {
         $('#output').hide();
@@ -75,6 +75,7 @@ $(document).ready(function() {
         $('#images').append('<li><img src="img/Neighbor.png" alt="Neighbor"></li>')
       }
     }
-  });
+    $(this).prop('disabled', true);
+  }));
 
 });

@@ -68,3 +68,13 @@ Expected Output: <div id="output">Beep, Boop</div>
 Test: "It remove ',' and add space between each array item when display in div#output"
 Code: userInputArray['Beep', 'Boop'];
 Expected Output: <div id="output">Beep Boop</div>
+
+Test: "It will loop through array and create new array with images associated with each output and append each image to list"
+Code: userInputArray['Beep'];
+Expected Output: <li><img src="img/Beep.png" alt="Beep"></li>
+
+Test: "It will replace text output of array with image array;
+Code: $('#output').hide();
+Expected Output: Only div#imageContainer visible
+
+
