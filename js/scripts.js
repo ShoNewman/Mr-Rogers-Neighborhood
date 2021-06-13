@@ -10,7 +10,13 @@ function isInteger(input) {
     return false;
   }
 }
-isInteger("not an integer");
+function isEmptySpace(input) {
+  if (input.length === 0) {
+    return false;
+  } else {
+    return true;
+  }
+}
 
 //Buisness Logic
 
@@ -41,13 +47,19 @@ $(document).ready(function() {
     let trimUserInput = trimSpace(userInput)
   
     let checkInteger = isInteger(trimUserInput);
+    let checkEmptySpace = isEmptySpace(number2);
   
     if (!checkInteger) {
       alert ("Not an integer!");
+    } else if (!checkEmptySpace) {
+      alert("You entered empty space! Please enter a number!");
+
     } else {
       let mutatedUserInput = beepBoop(trimUserInput);
       console.log(mutatedUserInput);
       userInputArray.push(mutatedUserInput); 
     }
   }
+
+  $('#output').text(userInputString);
 });

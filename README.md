@@ -60,3 +60,7 @@ Expected Output: false;
 Test: "It should ensure that user input does not contain any spaces"
 Code: userInput = "   5   ";
 Expected Output: "5";
+
+Test: "It should display userInputArray[] in div#output for user to see and should update each time user enters new input"
+Code: userInputArray['Beep', 'Boop'];
+Expected Output: <div id="output">Beep, Boop</div>
