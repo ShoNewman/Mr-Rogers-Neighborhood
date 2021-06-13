@@ -35,7 +35,6 @@ function beepBoop(userInput) {
   
 }
 
-beepBoop("0 10 12 23");
 
 //User Interface Logic
 let userInputArray = [];
@@ -47,20 +46,32 @@ $(document).ready(function() {
     let trimUserInput = trimSpace(userInput)
   
     let checkInteger = isInteger(trimUserInput);
-    let checkEmptySpace = isEmptySpace(number2);
+    let checkEmptySpace = isEmptySpace(trimUserInput);
   
     if (!checkInteger) {
-      alert ("Not an integer!");
+      alert ("Please enter a whole number!");
     } else if (!checkEmptySpace) {
       alert("You entered empty space! Please enter a number!");
-
     } else {
       let mutatedUserInput = beepBoop(trimUserInput);
       console.log(mutatedUserInput);
       userInputArray.push(mutatedUserInput); 
     }
-  }
-  
-  let userInputString = userInputArray.join(" ");
-  $('#output').text(userInputString);
+
+    let userInputString = userInputArray.join(" ");
+    $('#output').text(userInputString);
+
+  });
+  $('#beepBoop').click(function() {
+    for (i=0; i < userInputArray.length; i++) {
+      if (userInputArray[i] == "Beep!") {
+        $('#images').append('<li><img src="img/Beep.png" alt="Beep"></li>');
+      } else if (userInputArray[i] == "Boop!") {
+        $('#images').append('<li><img src="img/Boop.png" alt="Boop"></li>')
+      } else if (userInputArray[i] == "Won't you be my neighbor?") {
+        $('#images').append('<li><img src="img/Neighbor.png" alt="Neighbor"></li>')
+      }
+    }
+  });
+
 });

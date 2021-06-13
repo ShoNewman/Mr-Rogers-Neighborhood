@@ -19,5 +19,24 @@ form {
   margin: auto;
 }
 #output {
-  display: none;
+  margin: auto;
+  width: 60%;
+  margin-top: 10%;
+  font-size: xx-large;
+  font-weight: bolder;
+}
+button#beepBoop {
+  clear: both;
+  display: block;
+  margin: auto;  
+}
+#imageContainer li {
+  width: 20%;
+  display: block;
+  float: left;
+  margin: 4%;
+  margin-bottom: 5%;
+}
+#imageContainer img {
+  width: 100%;
 }
