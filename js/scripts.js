@@ -1,4 +1,7 @@
 // Utility functions
+function trimSpace(input) {
+  return input.trim();
+}
 function isInteger(input) {
   input = Number(input);
   if (Number.isInteger(input)) {
@@ -33,11 +36,16 @@ let userInputArray = [];
 $(document).ready(function() {
   $("form#userInputForm").submit(function(event) {
     event.preventDefault();
-    
-    const number1 = parseInt($("#input").val());
-    userInputArray.push(number1); 
-
+      
+    let userInput = $("#input").val();
+    let trimUserInput = trimSpace(userInput)
   
-    alert(userInputArray);
+   
+    let checkInteger = isInteger(trimUserInput);
+    console.log(checkInteger)
+    if (!checkInteger) {
+      alert ("Not an integer!");
+  
+    } 
   });
 });

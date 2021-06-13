@@ -38,9 +38,13 @@ Expected Output: ["Won't you be my neighbor?"];
 
 
 -------------------------------------------------------
-Describe: isInteger(userInput)
+Describe: checkInteger(userInput)
 Test: "It should allow only integers to be inputted"
-Code: beepBoop("not an integer");
+Code: isInteger("3.4");
 Expected Output: false;
+
+Test: "It should remove all empty spaces in user input before input is used proccesed by functions"
+Code: trimSpace("    5   ")
+Expected Output: "5";
 
 
