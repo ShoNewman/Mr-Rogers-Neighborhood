@@ -56,3 +56,7 @@ Expected Output: userInputArray["3"];
 Test: "It should ensure that user input is only an integer"
 Code: userInput = "3.5";
 Expected Output: false;
+
+Test: "It should ensure that user input does not contain any spaces"
+Code: userInput = "   5   ";
+Expected Output: "5";
