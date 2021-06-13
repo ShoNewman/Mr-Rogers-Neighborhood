@@ -35,28 +35,12 @@ Test: "It should return an array with 'Won't you be my neighbor' if the number i
 Code: beepBoop(23);
 Expected Output: ["Won't you be my neighbor?"];
 
-Test: "It should check multple user Inputs for the number 1 and return a mutated array with all numbers that include 1 replaced with 'Beep!'"
-code: beepBoop("0 10 12 11");
-Expected Output: ["0", "Beep!", "Beep!", "Beep!"]
 
-Test: "It should check multple user Inputs for the number 1 and return a mutated array with all numbers that include 1 replaced with 'Beep!' but not numbers that include 2 or 3"
-code: beepBoop("0 10 12 13");
-Expected Output: ["0", "Beep", "12", "13"]
-
-Test: "It should check multple user Inputs for the number 2 and return a mutated array with all numbers that include 2 replaced with 'Boop!'"
-code: beepBoop("0 10 12 13");
-Expected Output: ["0", "Beep", "Boop!", "13"]
-
-Test: "It should check multple user Inputs for the number 2 and return a mutated array with all numbers that include 2 replaced with 'Boop!' but not numbers that include 3"
-code: beepBoop("0 10 12 23");
-Expected Output: ["0", "Beep", "Boop!", "23"]
-
-Test: "It should check multple user Inputs for the number 3 and return a mutated array with 'Won't you be my neighbor'"
-code: beepBoop("0 10 12 23");
-Expected Output: ["0", "Beep", "Boop!", "Won't you be my neighbor"]
 
 -------------------------------------------------------
 Describe: isInteger(userInput)
 Test: "It should allow only integers to be inputted"
 Code: beepBoop("not an integer");
 Expected Output: false;
+
+
