@@ -65,10 +65,13 @@ $(document).ready(function() {
   $('#beepBoop').click(function() {
     for (i=0; i < userInputArray.length; i++) {
       if (userInputArray[i] == "Beep!") {
+        $('#output').hide();
         $('#images').append('<li><img src="img/Beep.png" alt="Beep"></li>');
       } else if (userInputArray[i] == "Boop!") {
+        $('#output').hide();
         $('#images').append('<li><img src="img/Boop.png" alt="Boop"></li>')
       } else if (userInputArray[i] == "Won't you be my neighbor?") {
+        $('#output').hide();
         $('#images').append('<li><img src="img/Neighbor.png" alt="Neighbor"></li>')
       }
     }
