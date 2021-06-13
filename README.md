@@ -52,3 +52,7 @@ Describe: userInputArray[]
 Test: "It should take value of user input and add it to userInputArray"
 Code: userInput = "3";
 Expected Output: userInputArray["3"];
+
+Test: "It should ensure that user input is only an integer"
+Code: userInput = "3.5";
+Expected Output: false;
