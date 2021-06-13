@@ -36,16 +36,18 @@ let userInputArray = [];
 $(document).ready(function() {
   $("form#userInputForm").submit(function(event) {
     event.preventDefault();
-      
+
     let userInput = $("#input").val();
     let trimUserInput = trimSpace(userInput)
   
-   
     let checkInteger = isInteger(trimUserInput);
-    console.log(checkInteger)
+  
     if (!checkInteger) {
       alert ("Not an integer!");
-  
-    } 
-  });
+    } else {
+      let mutatedUserInput = beepBoop(trimUserInput);
+      console.log(mutatedUserInput);
+      userInputArray.push(mutatedUserInput); 
+    }
+  }
 });

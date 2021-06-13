@@ -47,4 +47,8 @@ Test: "It should remove all empty spaces in user input before input is used proc
 Code: trimSpace("    5   ")
 Expected Output: "5";
 
-
+-------------------------------------------------------
+Describe: userInputArray[]
+Test: "It should take value of user input and add it to userInputArray"
+Code: userInput = "3";
+Expected Output: userInputArray["3"];
