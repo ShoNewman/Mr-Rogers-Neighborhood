@@ -60,6 +60,7 @@ $(document).ready(function() {
       userInputArray.push(mutatedUserInput); 
     }
   }
-
+  
+  let userInputString = userInputArray.join(" ");
   $('#output').text(userInputString);
 });
