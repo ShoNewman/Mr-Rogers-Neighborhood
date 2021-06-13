@@ -11,19 +11,19 @@ isInteger("not an integer");
 
 //Buisness Logic
 
-function beepBoop(input) {
-  let beepBoopArray = input.split(" ");
-  console.log(beepBoopArray);
-  for (i = 0; i < beepBoopArray.length; i++) { 
-    if (beepBoopArray[i].includes("1") && !beepBoopArray[i].includes("2") && !beepBoopArray[i].includes("3")) {
-    beepBoopArray[i] = "Beep!";
-    } else if (beepBoopArray[i].includes("2") && !beepBoopArray[i].includes("3")) {
-    beepBoopArray[i] = "Boop!";
-    } else if (beepBoopArray[i].includes("3")) {
-      beepBoopArray[i] = "Won't you be my neighbor?"
-    }
+function beepBoop(userInput) {
+  if (userInput === 0) {
+    return userInput;
+  } else if (userInput.includes(1) && !userInput.includes(2) && !userInput.includes(3)) {
+    return "Beep!";
+  } else if (userInput.includes(2) && !userInput.includes(3)) {
+    return "Boop!";
+  } else if (userInput.includes(3)) {
+    return "Won't you be my neighbor?";
+  } else {
+    return userInput;
   }
- return beepBoopArray;
+  
 }
 
 beepBoop("0 10 12 23");
