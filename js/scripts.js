@@ -18,19 +18,30 @@ function isEmptySpace(input) {
   }
 }
 
-//Buisness Logic
 function beepBoop(userInput) {
-  if (userInput === 0) {
-    return userInput;
-  } else if (userInput.includes(1) && !userInput.includes(2) && !userInput.includes(3)) {
-    return "Beep!";
-  } else if (userInput.includes(2) && !userInput.includes(3)) {
-    return "Boop!";
-  } else if (userInput.includes(3)) {
-    return "Won't you be my neighbor?";
-  } else {
-    return userInput;
-  } 
+  let input = parseInt(userInput);
+  let userInputArray = [];
+  for (let i = 0; i <= input; i++ ) {
+    userInputArray.push(i);  
+  }
+  return userInputArray.toString().split(',');  
+}
+
+function beepBoopMutate(userInputArray) {
+  for (i = 0; i < userInputArray.length; i++ ) {
+    if (i === 0) {
+      userInputArray[i] = i;
+    } else if (userInputArray[i].includes('1') && !userInputArray[i].includes('2') && !userInputArray[i].includes('3')) {
+      userInputArray[i] = "Beep!"; 
+    } else if (userInputArray[i].includes('2') && !userInputArray[i].includes('3')) {
+      userInputArray[i] = "Boop!";
+    } else if (userInputArray[i].includes('3')) {
+      userInputArray[i] = "Won't you be my neighbor?";
+    } else {
+      userInputArray[i] = userInputArray[i];
+    } 
+  }
+    return userInputArray;
 }
 
 //User Interface Logic
@@ -42,22 +53,19 @@ $(document).ready(function() {
     $("#imageContainer").hide;
 
     let userInput = $("#input").val();
-    let trimUserInput = trimSpace(userInput)
-  
-    let checkInteger = isInteger(trimUserInput);
-    let checkEmptySpace = isEmptySpace(trimUserInput);
+    userInput = trimSpace(userInput)
+    let checkInteger = isInteger(userInput);
+    let checkEmptySpace = isEmptySpace(userInput);
   
     if (!checkInteger) {
       alert ("Please enter a whole number!");
     } else if (!checkEmptySpace) {
       alert("You entered empty space! Please enter a number!");
     } else {
-      let mutatedUserInput = beepBoop(trimUserInput);
-      console.log(mutatedUserInput);
-      userInputArray.push(mutatedUserInput); 
+      userInputArray = beepBoop(userInput);
+      userInputArray = beepBoopMutate(userInputArray);
     }
-    let userInputString = userInputArray.join(" ");
-    $('#output').text(userInputString);
+    $('#output').html(userInputArray.join(' '));
   });
 
   $('#beepBoop').click(function() {
