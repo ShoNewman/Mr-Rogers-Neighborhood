@@ -52,47 +52,43 @@ _Shoshana Newman [sho.newman@gmail.com](mailto:sho.newman@gmail.com)_
 Test Driven Development
 
 Describe: beepBoop()
-Test: "It convert string into integer"
-Code: beepBoop(0);
-Expected Output: "0"";
+Test: "It should convert string into integer"
+Code: beepBoop("0");
+Expected Output: 0;
 
 Test: "It should create an array starting from 0 until the number that the user inputted"
 Code: beepBoop(1);
-Expected Output: userInputArray = [0, 1];
+Expected Output: [0, 1];
 
 Test: "It should convert the array of numbers to an array of strings so that .includes method can be used to evaluate the elements"
-Code: userInputArray = [0, 1];
+Code: beepBoop(1);
 Expected Output: userInputArray = ["0", "1"];
 
 --------------------------------------------
 Describe: beepBoopMutate()
 Test: "It should replace any 0 in the array with a 0"
-Code: beepBoop(0);
+Code: beepBoopMutatue(0);
 Expected Output: [0];
 
-Test: "It should replace any "1" in the array with 'Beep'"
-Code: beepBoop(1);
-Expected Output: ["Beep"];
+Test: "It should replace any numbers with '1' in the array with 'Beep'"
+Code: beepBoopMutate(1);
+Expected Output: ["0", "Beep"];
 
-Test: "It should replace any "2" in the array with 'Boop'"
-Code: beepBoop(2);
-Expected Output: ["Boop"];
+Test: "It should replace any numbers with '2' in the array with 'Boop'"
+Code: beepBoopMutate(2);
+Expected Output: ["0", "Beep", "Boop"];
 
-Test: "It should replace any "3" in the array with 'Won't you be my neighbor?'"
-Code: beepBoop(3);
-Expected Output: ["Won't you be my neighbor?"];
+Test: "It should replace any numbers with '2' in the array with 'Boop' even if that same number contains a '1'"
+Code: beepBoopMutate(12);
+Expected Output: ["0", "Beep", "Boop", "Won't you be my neighbor?", 4, 5, 6, 7, 8, 9, "Beep", "Beep", "Boop"];
 
-Test: "It should replace any number with '1' in the array with 'Beep'"
-Code: beepBoop(10);
-Expected Output: ["Beep"];
+Test: "It should replace any numbers with '3' in the array with 'Won't you be my neighbor?'"
+Code: beepBoopMutate(3);
+Expected Output: ["0", "Beep", "Boop", "Won't you be my neighbor?"];
 
-Test: "It should replace any number with '2' in the array with 'Boop', and this should override any numbers with '1'"
-Code: userInputArray = [12, 20];
-Expected Output: ["Boop", Boop"];
-
-Test: "It should replace any number with '3' in the array with 'Won't you be my neighbor', and this should override any numbers with '2' and '1'"
-Code: userInputArray = [13, 23, 30];
-Expected Output: ["Won't you be my Neighbor", "Won't you be my Neighbor", "Won't you be my Neighbor"];
+Test: "It should replace any numbers with '3' in the array with 'Won't you be my neighbor?' even if that same number contains a "1" or a "2""
+Code: beepBoopMutate(23);
+Expected Output: ["0", "Beep", "Boop", "Won't you be my neighbor?", 4, 5, 6, 7, 8, 9, "Beep", "Beep", "Boop", "Won't you be my neighbor?", "Beep", "Beep", "Beep", "Beep", "Beep", "Beep", "Boop", "Boop", "Boop", "Won't you be my neighbor?"];
 
 -------------------------------------------------------
 Describe: trimSpace()
@@ -109,27 +105,10 @@ Expected Output: false;
 -------------------------------------------------------
 Describe: isEmptySpace()
 Test: "It should test if user submitted an empty form"
-Code: User input = ''
+Code: isEmptySpace('')
 Expected Output: false;
 
--------------------------------------------------------
-Describe: User interface displayed on form submission;
 
-Test: "It should display userInputArray[] in div#output for user to see but without the comma"
-Code: userInputArray['Beep', 'Boop'];
-Expected Output: BeepBoop
-
-Test: "It should add space between each array item when display in div#output"
-Code: userInputArray['Beep', 'Boop'];
-Expected Output: Beep Boop
-
-Test: "It will loop through array and create new array with images associated with each output and append each image to list"
-Code: userInputArray['Beep'];
-Expected Output: image of owl
-
-Test: "It will replace text output of array with image array;
-Code: $('#output').hide();
-Expected Output: Only div#imageContainer visible
 
 
 
